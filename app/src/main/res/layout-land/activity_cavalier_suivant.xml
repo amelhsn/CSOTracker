@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CavalierSuivant">
+    <LinearLayout
+        android:id="@+id/activity_enregistrement2_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/activity_enregistrement2_nom_activite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/enregistrement_cavalier_2"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Tableau resultats -->
+        <TableLayout
+            android:id="@+id/activity_enregistrement2_tab_results"
+            style="frag1TableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:id="@+id/activity_enregistrement2_TabRes_L1"
+                style="frag1HeaderTableRow"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_vide"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Points"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/points"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Malus"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/malus"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Total"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/total"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Chrono"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/chrono"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/activity_enregistrement2_TabRes_L2"
+                style="frag1TableRow"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Cavalier1"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/cavalier1_2"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_recap_TabRes_C1_points"
+                    style="frag1Col"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C1_malus"
+                    style="frag1Col"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C1_Total"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C1_chrono"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/activity_enregistrement2_TabRes_L3"
+                style="frag1TableRow"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_Cavalier2"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+                    android:text="@string/cavalier2_2"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C2_points"
+                    style="frag1Col"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C2_malus"
+                    style="frag1Col"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C2_total"
+                    style="frag1HeaderCol"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/activity_enregistrement2_TabRes_C2_chrono"
+                    style="frag1HeaderCol"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>   <!-- Tableau resultats -->
+
+
+        <!-- Tableau boutons malus -->
+        <TableLayout
+            android:id="@+id/activity_enregistrement2_malus_btn"
+            style="frag1TableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout android:weightSum="2"
+                android:orientation="horizontal"
+                android:id="@+id/activity_enregistrement2_malus_btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/activity_enregistrement2_obstacle_btn"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/obstacle_pass"
+                    android:layout_width="match_parent" />
+
+                <Button
+                    android:id="@+id/activity_enregistrement2_chute_btn"
+                    android:layout_height="100dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/chute"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout android:weightSum="2"
+                android:orientation="horizontal"
+                android:id="@+id/activity_enregistrement2_malus_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/activity_enregistrement2_refus_btn"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_weight="1"
+                    android:text="@string/refus"
+                    android:layout_width="match_parent" />
+
+                <Button
+                    android:id="@+id/activity_enregistrement2_barre_btn"
+                    android:layout_height="100dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:text="@string/barre_au_sol"
+                    app:rippleColor="#FFFFFF"
+                    android:layout_width="match_parent" />
+
+
+            </LinearLayout>
+        </TableLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chronom_tre"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/activity_enregistrement2_chrono_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Chronometer
+                android:id="@+id/activity_enregistrement2_chrono"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/activity_enregistrement2_start_chrono_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_media_play"
+                android:text="@string/start" />
+
+            <ImageButton
+                android:id="@+id/activity_enregistrement2_stop_chrono_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_media_pause"
+                android:text="@string/stop" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_enregistrement2_photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/activity_enregistrement2_photo_btn"
+                android:layout_width="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="80dp"
+                android:background="@drawable/roundcorner"
+                android:src="@android:drawable/ic_menu_camera" />
+            <TextView
+                android:id="@+id/activity_enregistrement2_photo_txt"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="19sp"
+                android:textColor="@color/black"
+                android:text="@string/prendre_une_photo"/>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/activity_enregistrement2_Fin"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:text="@string/fin_de_parcours"/>
+
+    </LinearLayout>
+</ScrollView>

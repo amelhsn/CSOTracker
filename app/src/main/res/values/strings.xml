@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CSO Tracker</string>
+    <string name="cavalier_1">Cavalier 1</string>
+    <string name="logo_cavalier" translatable="false">Logo cavalier</string>
+    <string name="cheval_1">Cheval 1</string>
+    <string name="cavalier2_1">Cavalier 2</string>
+    <string name="cheval_2">Cheval 2</string>
+    <string name="localisation">Localisation</string>
+    <string name="entrez_le_nom_du_premier_cavalier">Entrez le nom du premier cavalier</string>
+    <string name="entrez_le_nom_du_premier_cheval">entrez le nom du premier cheval</string>
+    <string name="entrez_le_nom_du_second_cavalier">entrez le nom du second cavalier</string>
+    <string name="entrez_le_nom_du_second_cheval">entrez le nom du second cheval</string>
+    <string name="terrain_parcours">terrain</string>
+    <string name="choisissez_le_type_de_terrain">Choisissez le type de terrain</string>
+    <string name="longueur_du_parcours">Longueur du parcours</string>
+    <string name="_300_m_tres">300 mètres</string>
+    <string name="_600_m_tre">600 mètre</string>
+    <string name="d_marrer">Démarrer</string>
+    <string name="nouveau_parcours">Nouveau parcours</string>
+    <string name="points">Points</string>
+    <string name="malus">Malus</string>
+    <string name="total">Total</string>
+    <string name="chrono">Chrono</string>
+    <string name="enregistrement">Enregistrement</string>
+    <string name="obstacle_pass">Obstacle passé</string>
+    <string name="chute">Chute</string>
+    <string name="barre_au_sol">Barre au sol</string>
+    <string name="refus">refus</string>
+    <string name="enregistrement_cavalier_1">enregistrement Cavalier 1</string>
+    <string name="cavalier2_2">Cavalier 2</string>
+    <string name="cavalier1_2">Cavalier 1</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="prendre_une_photo">Prendre une photo</string>
+    <string name="chronom_tre">Chronomètre :</string>
+    <string name="cavalier_suivant">Cavalier suivant</string>
+    <string name="enregistrement_cavalier_2">Enregistrement cavalier 2</string>
+    <string name="fin_de_parcours">Fin de parcours</string>
+    <string name="locate_string" translatable="false">locate_string</string>
+    <string name="localisation2">localisation</string>
+    <string name="r_capitulatif">Récapitulatif</string>
+    <string name="concours">Concours</string>
+    <string name="entrez_le_nom_du_concours">entrez le nom du concours</string>
+    <string name="historique">historique</string>
+    <string name="choix_de_la_langue">choix de la langue</string>
+    <string name="bienvenue_dans_cso_tracker">Bienvenue dans CSO Tracker !</string>
+    <string name="menu_principal">Menu principal</string>
+    <string name="cinq_derni_res_courses">cinq dernières courses</string>
+    <string-array name="terrains">
+        <item>Sciure</item>
+        <item>Herbe</item>
+        <item>Sable</item>
+    </string-array>
+    <string-array name="languages">
+        <item>French</item>
+        <item>English</item>
+    </string-array>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            app:srcCompat="@mipmap/ic_logo_round"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="100dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bienvenue_dans_cso_tracker"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+
+
+        <Button
+            android:id="@+id/activity_main_parcours"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:text="@string/nouveau_parcours"
+            android:textFontWeight="2" />
+
+        <Button
+            android:id="@+id/mHistoriqueBtn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:text="@string/historique"
+            android:textFontWeight="2"/>
+
+        <Button
+            android:id="@+id/cinq"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:text="@string/cinq_derni_res_courses"
+            android:textFontWeight="2"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choix_de_la_langue"
+            android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="center" android:paddingTop="25sp"/>
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/languages"
+            android:gravity="center" android:paddingTop="25sp" />
+
+</LinearLayout>
+</ScrollView>
