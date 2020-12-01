@@ -133,15 +133,16 @@ public class Enregistrement extends AppCompatActivity {
 
         //appareil photo
 
-            ImageButton photoBtn = findViewById(R.id.activity_enregistrement_photo_btn);
-            photoBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        ImageButton photoBtn = findViewById(R.id.activity_enregistrement_photo_btn);
+        photoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                    Intent photo = new Intent(Enregistrement.this, photo.class);
-                    startActivity(photo);
-                }
-            });
+                Intent photoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                int REQUEST_ID_IMAGE_CAPTURE = 100;
+                startActivityForResult(photoIntent, REQUEST_ID_IMAGE_CAPTURE);
+            }
+        });
 
 
 
