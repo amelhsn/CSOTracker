@@ -13,6 +13,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
     public class MyMapFragment extends SupportMapFragment implements OnMapReadyCallback {
 
         private GoogleMap googleMap;
+        private LocationManager locationManager;
 
         public MyMapFragment()  {
             getMapAsync(this);
@@ -24,7 +25,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
             // Set default position
            // locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-            LatLng paris = new LatLng(48.856614, 2.3522219); // lat et long
+           LatLng paris = new LatLng(48.856614, 2.3522219); // lat et long
             this.googleMap.addMarker(new MarkerOptions().position(paris).title("Marker in PARIS"));
             this.googleMap.moveCamera(CameraUpdateFactory.newLatLng(paris));
 

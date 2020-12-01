@@ -3,7 +3,9 @@ package com.example.csotracker;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,14 +24,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 
-public class NouveauParcours extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class NouveauParcours extends AppCompatActivity implements View.OnClickListener {
 
     protected EditText cavalier1nom, cavalier2nom, cheval2nom, cheval1nom, nomConcours;
     protected TextView LocaView;
     protected Button valider, demarrer;
     public Connection connexion = null;
+    private CoursesDataSource datasource;
 
 
     ArrayList<String> nomsListe = new ArrayList<>();
@@ -69,9 +73,39 @@ public class NouveauParcours extends AppCompatActivity implements AdapterView.On
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.terrains, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTerrain.setAdapter(adapter);
-        spinnerTerrain.setOnItemSelectedListener (this);
+        //spinnerTerrain.setOnItemSelectedListener (this);
 
+        //SQLite
+        datasource = new CoursesDataSource(this);
+        datasource.open();
 
+        List<Course> values = datasource.getAllCourses();
+    }
+
+    /*
+    // Sera appelée par l'attribut onClick
+    // des boutons déclarés dans main.xml
+    public void onClick(View view) {
+        @SuppressWarnings("unchecked")
+        ArrayAdapter<Course> adapter = (ArrayAdapter<Course>) getListAdapter();
+        Course course = null;
+        switch (view.getId()) {
+            case R.id.add:
+                String[] courses = new String[] { "Course1", "ta mer" };
+                //int nextInt = new Random().nextInt(3);
+                // enregistrer le nouveau commentaire dans la base de données
+                course = datasource.createCourse(courses[0], courses[1]);
+                adapter.add(course);
+                break;
+            case R.id.delete:
+                if (getListAdapter().getCount() > 0) {
+                    course = (Course) getListAdapter().getItem(0);
+                    datasource.deleteCourse(course);
+                    adapter.remove(course);
+                }
+                break;
+        }
+        adapter.notifyDataSetChanged();
     }
 
     //maps
@@ -80,14 +114,8 @@ public class NouveauParcours extends AppCompatActivity implements AdapterView.On
         String text = parent.getItemAtPosition(position).toString();
         Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
-
-    //Connexion SQL
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-        private void Connection_mysql() {
-
+*/
+    private void Connection_mysql(){
             // fin du run
             Thread thread = new Thread(() -> {
                 try {
@@ -144,18 +172,18 @@ public class NouveauParcours extends AppCompatActivity implements AdapterView.On
 
 
 
-/*
     public void effacerView(){
         cavalier1nom.setText("");
         cavalier2nom.setText("");
         cheval1nom.setText("");
         cheval2nom.setText("");
-    }*/
+    }
 
    @Override
     public void onClick(View v) {
         if (v == valider) {
-            Connection_mysql();
+            //Connection_mysql();
+            Connection_sqlite();
         }
 
         if (v == demarrer){
@@ -171,5 +199,14 @@ public class NouveauParcours extends AppCompatActivity implements AdapterView.On
 
             startActivity(enregistrementIntent);
         }
+    }
+
+    public void Connection_sqlite(){
+        MySQLiteHelper sqlite = new MySQLiteHelper(this);
+        SQLiteDatabase db = sqlite.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(sqlite.COLUMN_NOM, nomConcours.getText().toString());
+        cv.put(sqlite.COLUMN_NOMCA1, cavalier1nom.getText().toString());
+        db.insert(sqlite.TABLE_COURSES, null, cv);
     }
 }
