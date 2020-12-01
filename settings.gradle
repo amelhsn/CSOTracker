@@ -1,0 +1,4 @@
+include ':mysql-connector-java-5.1.48'
+include ':jdbc'
+include ':app'
+rootProject.name = "CSO Tracker"
